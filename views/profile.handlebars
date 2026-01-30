@@ -1,0 +1,55 @@
+<div class="d-flex justify-content-between align-items-end mb-4">
+  <div>
+    <h1 class="h3 mb-1">Welcome, {{name}}!</h1>
+    <p class="text-muted mb-0">Manage your fundraising projects below.</p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-6">
+    <h2 class="h5 mb-3">Create a New Project</h2>
+    <form class="new-project-form">
+      <div class="mb-3">
+        <label class="form-label" for="project-name">Project Name</label>
+        <input class="form-control" type="text" id="project-name" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="project-desc">Description</label>
+        <textarea class="form-control" id="project-desc" rows="4" required></textarea>
+      </div>
+      <div class="mb-3">
+        <label class="form-label" for="project-funding">Needed Funding ($)</label>
+        <input
+          class="form-control"
+          type="number"
+          step="0.01"
+          id="project-funding"
+          required
+        />
+      </div>
+      <button class="btn btn-dark" type="submit">Create Project</button>
+    </form>
+  </div>
+
+  <div class="col-md-6">
+    <h2 class="h5 mb-3">Your Projects</h2>
+    {{#if projects.length}}
+      <div class="list-group project-list">
+        {{#each projects as |project|}}
+          <div class="list-group-item d-flex justify-content-between align-items-start">
+            <div class="me-auto">
+              <h5 class="mb-1">{{project.name}}</h5>
+              <p class="mb-1 small">{{project.description}}</p>
+              <small class="text-muted">Needed funding: {{format_amount project.needed_funding}}</small>
+            </div>
+            <button class="btn btn-sm btn-danger" data-id="{{project.id}}">Delete</button>
+          </div>
+        {{/each}}
+      </div>
+    {{else}}
+      <p class="text-muted">You haven't created any projects yet.</p>
+    {{/if}}
+  </div>
+</div>
+
+<script src="/js/profile.js"></script>

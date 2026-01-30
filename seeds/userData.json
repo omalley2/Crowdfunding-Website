@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Avery",
+    "email": "avery@crowdfundr.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Mina",
+    "email": "mina@crowdfundr.com",
+    "password": "password12345"
+  },
+  {
+    "name": "Jordan",
+    "email": "jordan@crowdfundr.com",
+    "password": "password12345"
+  }
+]

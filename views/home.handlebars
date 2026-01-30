@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-between align-items-end mb-3">
+  <div>
+    <h1 class="h3 mb-1">Active Projects</h1>
+    <p class="text-muted mb-0">Browse the latest fundraising projects.</p>
+  </div>
+</div>
+
+{{#if projects.length}}
+  <div class="row g-3">
+    {{#each projects}}
+      <div class="col-12 col-md-6 col-lg-4">
+        {{> project-card}}
+      </div>
+    {{/each}}
+  </div>
+{{else}}
+  <div class="alert alert-secondary">No projects yet. {{#if logged_in}}Create one in your profile!{{else}}Log in to post your first project.{{/if}}</div>
+{{/if}}

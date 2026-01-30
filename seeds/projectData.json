@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Community Garden Tools",
+    "description": "Help us buy tools and soil to expand the neighborhood garden.",
+    "needed_funding": 750.0,
+    "user_id": 1
+  },
+  {
+    "name": "Indie Game Soundtrack",
+    "description": "Funding original music production for a small indie game release.",
+    "needed_funding": 1200.0,
+    "user_id": 2
+  },
+  {
+    "name": "Local Animal Shelter Renovation",
+    "description": "Small upgrades: paint, kennels, and medical supplies.",
+    "needed_funding": 2300.0,
+    "user_id": 3
+  }
+]
